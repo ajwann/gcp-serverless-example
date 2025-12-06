@@ -1,0 +1,33 @@
+## 🚫 Ignore all dotfiles (files/directories starting with a dot)
+
+# The pattern `.*` matches any file or directory starting with a period.
+# However, Git often ignores directories ending in a slash (e.g., .git/), 
+# so we use two lines to cover both files and directories explicitly.
+# The leading slash `/` ensures this rule only applies to the root of the repository.
+/.*
+/.*/**
+
+## ✅ Exceptions: Files/Directories that MUST be kept
+
+# Do not ignore the Git configuration directory
+!.git/
+
+# Do not ignore the .gitignore file itself
+!.gitignore
+
+# Node.js environments often use a few other dotfiles/folders that should be kept
+# Uncomment these if you are using Node/NPM configuration:
+# !.npmrc
+# !.nvmrc
+# !.babelrc
+# !.eslintrc
+# !.prettierrc
+# !.husky/
+
+## 🗑️ Other standard ignores (non-dotfile)
+
+# Ignore common build and dependency folders
+/node_modules
+/dist
+/build
+/out
