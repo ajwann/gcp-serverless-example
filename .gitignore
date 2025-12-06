@@ -7,6 +7,9 @@
 /.*
 /.*/**
 
+# Explicitly ignore the .env file in the /firebase/frontend directory
+.env
+
 ## ✅ Exceptions: Files/Directories that MUST be kept
 
 # Do not ignore the Git configuration directory
